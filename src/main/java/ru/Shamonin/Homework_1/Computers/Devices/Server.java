@@ -11,7 +11,7 @@ import javax.annotation.PreDestroy;
 @Component
 @Slf4j
 public class Server {
-    @Qualifier("Server")
+    @Qualifier("server")
     private Subtype subtype;
 
     @PostConstruct

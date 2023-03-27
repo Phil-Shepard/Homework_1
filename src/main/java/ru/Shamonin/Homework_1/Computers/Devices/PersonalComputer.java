@@ -1,6 +1,7 @@
 package ru.Shamonin.Homework_1.Computers.Devices;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import ru.Shamonin.Homework_1.Computers.Subtypes.Subtype;
@@ -22,7 +23,8 @@ public class PersonalComputer {
         log.info("Personal computer bean deleted.");
     }
 
-    public void setType(@Qualifier("StationaryDevice") Subtype subtype)
+    @Autowired
+    public void setType(@Qualifier("stationaryDevice") Subtype subtype)
     {
         this.subtype = subtype;
     }
